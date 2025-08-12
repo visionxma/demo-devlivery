@@ -34,7 +34,7 @@ const PRODUCTS: Product[] = [
     name: "Botijão de Gás 13kg",
     brand: "Ultragaz",
     price: 120.0,
-    image: "/ultragaz-blue-gas-cylinder.png",
+    image: "./ultragaz-blue-gas-cylinder.png",
     category: "gas",
   },
   {
@@ -42,7 +42,7 @@ const PRODUCTS: Product[] = [
     name: "Botijão de Gás 13kg",
     brand: "Liquigás",
     price: 118.0,
-    image: "/botijao-gas-liquigas-laranja.png",
+    image: "./botijao-gas-liquigas-laranja.png",
     category: "gas",
   },
   {
@@ -50,7 +50,7 @@ const PRODUCTS: Product[] = [
     name: "Botijão de Gás 13kg",
     brand: "Copagaz",
     price: 115.0,
-    image: "/botijao-gas-copagaz-verde.png",
+    image: "./botijao-gas-copagaz-verde.png",
     category: "gas",
   },
   // Water Products
@@ -59,7 +59,7 @@ const PRODUCTS: Product[] = [
     name: "Galão de Água 20L",
     brand: "Cristalina",
     price: 8.0,
-    image: "/galao-agua-cristalina-20-litros.png",
+    image: "./galao-agua-cristalina-20-litros.png",
     category: "water",
   },
   {
@@ -67,7 +67,7 @@ const PRODUCTS: Product[] = [
     name: "Galão de Água 20L",
     brand: "Indaiá",
     price: 9.0,
-    image: "/galao-agua-indaia-20-litros.png",
+    image: "./galao-agua-indaia-20-litros.png",
     category: "water",
   },
   {
@@ -75,7 +75,7 @@ const PRODUCTS: Product[] = [
     name: "Galão de Água 20L",
     brand: "Bonafont",
     price: 8.5,
-    image: "/bonafont-20-litros-galao.png",
+    image: "./bonafont-20-litros-galao.png",
     category: "water",
   },
 ]
