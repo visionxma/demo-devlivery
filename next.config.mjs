@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const repoName = "demo-devlivery";
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -9,6 +10,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: "export",
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
 }
 
 export default nextConfig
