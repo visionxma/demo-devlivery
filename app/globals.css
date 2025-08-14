@@ -273,6 +273,22 @@
     padding: 12px !important;
   }
 
+  /* Centralizar conteúdo do modal */
+  [data-slot="dialog-content"] {
+    margin: auto !important;
+    max-width: calc(100vw - 2rem) !important;
+    max-height: 85vh !important;
+    width: auto !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
   .modal-content {
     margin: 0 !important;
     max-height: 90vh !important;
