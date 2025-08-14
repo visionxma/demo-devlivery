@@ -41,14 +41,14 @@ export default function ProductCard({ product, isSelected, onSelectionChange, on
 
   return (
     <Card
-      className={`overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
-        isSelected ? "ring-2 ring-blue-500 bg-blue-50" : ""
+      className={`overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-0 ${
+        isSelected ? "ring-2 ring-blue-500 bg-blue-50/50" : "hover:shadow-lg"
       }`}
       onClick={handleCardClick}
     >
       <CardContent className="p-0">
         {/* Product Image */}
-        <div className="relative h-48 bg-gray-100">
+        <div className="relative h-48 sm:h-52 bg-gradient-to-br from-gray-50 to-gray-100">
           <Image
             src={product.image || "/placeholder.svg"}
             alt={`${product.brand} - ${product.name}`}
@@ -56,7 +56,7 @@ export default function ProductCard({ product, isSelected, onSelectionChange, on
             className="object-cover"
           />
           {isSelected && (
-            <div className="absolute top-2 right-2 bg-blue-500 text-white rounded-full p-1">
+            <div className="absolute top-3 right-3 bg-blue-500 text-white rounded-full p-2 shadow-lg">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
@@ -68,39 +68,37 @@ export default function ProductCard({ product, isSelected, onSelectionChange, on
           )}
         </div>
 
-        {/* Product Info */}
-        <div className="p-4 space-y-4">
-          <div>
-            <h3 className="font-semibold text-gray-900 text-lg">{product.name}</h3>
-            <p className="text-gray-600">Marca: {product.brand}</p>
+        <div className="p-4 sm:p-5 space-y-4">
+          <div className="space-y-1">
+            <h3 className="font-bold text-gray-900 text-lg sm:text-xl leading-tight">{product.name}</h3>
+            <p className="text-gray-600 text-sm font-medium">Marca: {product.brand}</p>
           </div>
 
-          {/* Price */}
-          <div className="text-2xl font-bold" style={{ color: "#4FA3D1" }}>
+          <div className="text-2xl sm:text-3xl font-bold" style={{ color: "#4FA3D1" }}>
             {formatPrice(product.price)}
           </div>
 
-          {/* Actions */}
-          <div className="flex items-center justify-between gap-3">
-            <div className="flex items-center space-x-2">
-              <Checkbox id={`select-${product.id}`} checked={isSelected} readOnly className="pointer-events-none" />
-              <span className="text-sm font-medium text-gray-700">
-                {isSelected ? "Selecionado" : "Clique para selecionar"}
-              </span>
+          <div className="space-y-3">
+            <div className="flex items-center justify-center">
+              <div className="flex items-center space-x-2 text-center">
+                <Checkbox id={`select-${product.id}`} checked={isSelected} readOnly className="pointer-events-none" />
+                <span className="text-sm font-medium text-gray-700">
+                  {isSelected ? "Selecionado" : "Toque para selecionar"}
+                </span>
+              </div>
             </div>
 
-            {/* WhatsApp Button */}
             <Button
               data-whatsapp="true"
               onClick={(e) => {
                 e.stopPropagation()
                 onWhatsAppClick(product)
               }}
-              className="flex items-center space-x-2 text-white font-medium"
+              className="w-full flex items-center justify-center space-x-2 text-white font-semibold min-h-[48px] rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
               style={{ backgroundColor: "#25D366" }}
             >
-              <MessageCircle size={16} />
-              <span className="hidden sm:inline">Comprar</span>
+              <MessageCircle size={18} />
+              <span>Comprar Agora</span>
             </Button>
           </div>
         </div>
