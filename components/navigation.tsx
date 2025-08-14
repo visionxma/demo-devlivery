@@ -17,7 +17,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="/atacarejo-sao-manoel-logo.png"
+              src="./atacarejo-sao-manoel-logo.png"
               alt="Atacarejo São Manoel"
               width={120}
               height={60}

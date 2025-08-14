@@ -64,7 +64,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
             >
-              <img src="/visionx-logo.png" alt="VisionX - Desenvolvedora de Software" className="h-6 w-auto" />
+              <img src="./visionx-logo.png" alt="VisionX - Desenvolvedora de Software" className="h-6 w-auto" />
             </a>
           </div>
         </div>

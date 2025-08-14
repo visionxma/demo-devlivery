@@ -50,7 +50,7 @@ export default function ProductCard({ product, isSelected, onSelectionChange, on
         {/* Product Image */}
         <div className="relative h-48 sm:h-52 bg-gradient-to-br from-gray-50 to-gray-100">
           <Image
-            src={product.image || "/placeholder.svg"}
+            src={product.image?.startsWith("/") ? `.${product.image}` : (product.image || "./placeholder.svg")}
             alt={`${product.brand} - ${product.name}`}
             fill
             className="object-cover"
