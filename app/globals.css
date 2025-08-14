@@ -271,6 +271,27 @@
     overflow-y: auto;
   }
 
+  /* Forçar centralização dos modais do Radix UI no mobile */
+  [data-radix-popper-content-wrapper] {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 50 !important;
+  }
+
+  /* Garantir que o DialogContent seja centralizado */
+  [data-slot="dialog-content"] {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    max-width: calc(100vw - 2rem) !important;
+    max-height: 85vh !important;
+    width: auto !important;
+  }
+
   /* Minimalist spacing */
   .space-y-4 > * + * {
     margin-top: 8px !important;
