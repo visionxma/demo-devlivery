@@ -258,6 +258,21 @@
     padding: 12px !important;
   }
 
+  /* Centralizar overlay do modal no mobile */
+  .modal-overlay,
+  [data-radix-popper-content-wrapper] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 50 !important;
+    padding: 12px !important;
+  }
+
   .modal-content {
     margin: 0 !important;
     max-height: 90vh !important;
@@ -271,25 +286,16 @@
     overflow-y: auto;
   }
 
-  /* Forçar centralização dos modais do Radix UI no mobile */
-  [data-radix-popper-content-wrapper] {
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    z-index: 50 !important;
-  }
-
   /* Garantir que o DialogContent seja centralizado */
   [data-slot="dialog-content"] {
-    position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
     margin: 0 !important;
     max-width: calc(100vw - 2rem) !important;
     max-height: 85vh !important;
-    width: auto !important;
+    width: 100% !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
   }
 
   /* Minimalist spacing */
